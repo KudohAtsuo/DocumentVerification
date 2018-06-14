@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Document Verification App</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/app.css">
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <h1>Document Verificaiton Dapp</h1>
+        <table class="table table-fluid">
+          <tr>
+            <th>Contract Address</th>
+            <td id="c_address"></td>
+          </tr>
+          <tr>
+            <th>Document Submitted</th>
+            <td id="d_number"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="row">
+        <h1>Add / Verifify Document</h1>
+      </div>
+      <div class="row">
+        <h5>Calculate document hash and submit to blockchain or verify existing document</h5>
+      </div>
+
+      <div>
+        Coinbase Address: <span id="cb_address"></span><br>
+        Coinbase Balance: <span id="cb_balance"></span>
+      </div>
+
+      <input type="file" id="myfile" class="form-control">
+
+      <h5>Document Hash(Base64)</h5>
+      <div id="hashvalue"></div>
+
+
+      <button class="btn btn-primary btn-lng" onclick="addingHash()">Submit Document</button>
+      <button class="btn btn-primary btn-lng" onclick="showHash()">Verify Document</button>
+
+      <div>
+        Document Registered Date: <span id="registerdate"></span><br>
+        Document Owner: <span id="docowner"></span><br>
+        Document Hash: <span id="dochash"></span>
+      </div>
+
+      <div class="row">
+        <h1>Docment Encryption/Decryption by AES</h1>
+      </div>
+
+      <input type="file" id="filetoaes" class="form-control">
+      <input type="text" id="privatekey" class="form-control" placeholder="Your privetekey to encrypt document">
+
+      <h5>Encrypted value(Base64)</h5>
+      <div id="encdoc"></div>
+
+      <button class="btn btn-primary btn-lng" id="btn_encdoc">Encript Document</button>
+
+
+      <div>
+        <button class="btn btn-primary btn-lng" id="submit_doc">Submit Encryption</button>
+        <button class="btn btn-primary btn-lng" id="get_doc">Get Documentation</button>
+      </div>
+      <div>
+        <span id="message"></span>
+      </div>
+
+
+  </div>
+
+
+
+
+
+
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/web3.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script src="./js/crypto-js.js"></script>
+
+
+
+    <script src="./js/app.js"></script>
+
+  </body>
+</html>
